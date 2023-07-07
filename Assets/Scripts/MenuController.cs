@@ -78,10 +78,10 @@ public class MenuController : MonoBehaviour
     IEnumerator LoadScene()
     {
         AsyncOperation loading = SceneManager.LoadSceneAsync(1);
-        loadingScreen.SetActive(true);
+       // loadingScreen.SetActive(true);
         while(!loading.isDone)
         {
-            loadingIcon.fillAmount = loading.progress;
+            //loadingIcon.fillAmount = loading.progress;
             yield return null;
         }
         

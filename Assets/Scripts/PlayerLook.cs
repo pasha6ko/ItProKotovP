@@ -41,7 +41,7 @@ public class PlayerLook : MonoBehaviour
             if (interactebleObject!=null) 
             {
                 interactionIcon.SetActive(true);
-                interactebleObject.UpdateUI(interactionIconText);
+                interactebleObject.UpdateInteractionIcon(interactionIconText);
             }
             else
             {

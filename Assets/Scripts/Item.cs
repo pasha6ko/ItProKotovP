@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 interface Interacteble
 {
-    public void Interact();
+    public void Interact(Player player);
 
-    public void UpdateUI(TextMeshProUGUI text);
+    public void UpdateInteractionIcon(TextMeshProUGUI text);
 
     public GameObject GetGameObject();
 }
@@ -20,14 +20,14 @@ public class Item : MonoBehaviour, Interacteble
         return gameObject;
     }
 
-    public void Interact()
+    public void Interact(Player player)
     {
         Destroy(gameObject);
     }
 
-    public void UpdateUI(TextMeshProUGUI text)
+    public void UpdateInteractionIcon(TextMeshProUGUI text)
     {
-        text.text = gameObject.name;
+        text.text = "Pick up";
     }
     
 }
