@@ -21,7 +21,7 @@ public class Shop : MonoBehaviour, Interacteble
     };
     List<Dictionary<string, float>> _activeModificators = new List<Dictionary<string, float>>()
     {
-        new Dictionary<string, float>(){["price"]=0f,["mod"]=1f},
+        new Dictionary<string, float>(){["price"]=0f,["mod"]=3f},
         new Dictionary<string, float>(){["price"]=15f,["mod"]=3f},
         new Dictionary<string, float>(){["price"]=250f,["mod"]=6f},
         new Dictionary<string, float>(){["price"]=3000f,["mod"]=20f},

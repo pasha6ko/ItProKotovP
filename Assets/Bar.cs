@@ -40,7 +40,7 @@ public class Bar : MonoBehaviour
         while (_time > 0)
         {
             _time -= Time.deltaTime;
-            timer.text = $"{Mathf.RoundToInt(_time / 60f)}:{Mathf.RoundToInt(_time % 60f)}";
+            timer.text = $"{Mathf.Floor(_time / 60f)}:{Mathf.Floor(_time % 60f)}";
 
             yield return null;
         }

@@ -36,7 +36,8 @@ public class ResourceManager : MonoBehaviour
     public void Start()
     {    
         print($"{PlayerPrefs.HasKey("coins")}:has coins");
-        if (PlayerPrefs.HasKey("coins")) LoadData();
+        LoadData();
+        /*if (PlayerPrefs.HasKey("coins")) LoadData();
         else
         {
             _activeClicks = 1;
@@ -45,7 +46,7 @@ public class ResourceManager : MonoBehaviour
             _beerBarelCount = 2;
             SaveData();
         
-        }
+        }*/
         UpdateUIElements();
     }
     public void SaveData()
@@ -64,7 +65,7 @@ public class ResourceManager : MonoBehaviour
         coins = PlayerPrefs.GetFloat("coins",0);
         _beerBarelCount = PlayerPrefs.GetFloat("_beerBarelCount",2);
         _passiveClicks = PlayerPrefs.GetFloat("_passiveClicks",0);
-        _activeClicks = PlayerPrefs.GetFloat("_activeClicks",1);
+        _activeClicks = PlayerPrefs.GetFloat("_activeClicks",3);
         print($"Beer {_beerBarelCount}");
         UpdateUIElements();
     }
